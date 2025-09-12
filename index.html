@@ -16,8 +16,11 @@
     }
     .container{width:100%; max-width:var(--max-w)}
 
-    header{margin-bottom:24px;}
-    header h1{font-size:24px; color:var(--blue);}
+    header{margin-bottom:24px; display:flex; justify-content:space-between; align-items:center;}
+    header h1{font-size:22px; color:var(--blue);}
+    nav{display:flex; gap:16px;}
+    nav a{color:var(--muted); text-decoration:none; font-weight:500;}
+    nav a:hover{color:var(--blue);}
 
     section{background:white; padding:20px; border-radius:var(--radius); margin-bottom:20px; border:1px solid var(--gray)}
     section h2{color:var(--blue); font-size:18px; margin-bottom:8px}
@@ -30,6 +33,10 @@
   <div class="container">
     <header>
       <h1>Minimal Site</h1>
+      <nav>
+        <a href="#research">Research</a>
+        <a href="#personal">Personal</a>
+      </nav>
     </header>
 
     <main>
