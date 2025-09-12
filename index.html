@@ -3,237 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dummy Website — Acme Co.</title>
-  <meta name="description" content="A simple dummy HTML website template for demos and prototypes." />
-
-  <!-- Simple CSS reset + utility styles -->
+  <title>Minimal Dummy Website</title>
   <style>
     :root{
-      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#06b6d4; --accent-2:#8b5cf6;
-      --max-w:1100px; --radius:12px;
-      color-scheme: dark;
+      --bg:#f5f6f7; --text:#1a1a1a; --muted:#555; --blue:#2563eb; --gray:#e5e7eb;
+      --radius:10px; --max-w:800px;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
+    *{box-sizing:border-box;margin:0;padding:0}
     body{
-      margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg,#071025 0%, #071426 100%); color:#e6eef6; -webkit-font-smoothing:antialiased;
-      line-height:1.45; padding:24px; display:flex; justify-content:center;
+      font-family:system-ui, sans-serif; background:var(--bg); color:var(--text);
+      display:flex; justify-content:center; padding:20px;
     }
     .container{width:100%; max-width:var(--max-w)}
 
-    /* Header */
-    header{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:28px}
-    .brand{display:flex; gap:12px; align-items:center}
-    .logo{width:44px; height:44px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); border-radius:10px; display:grid; place-items:center; font-weight:700}
-    nav{display:flex; gap:14px; align-items:center}
-    nav a{color:var(--muted); text-decoration:none; padding:8px 12px; border-radius:8px}
-    nav a:hover{color:#fff; background:rgba(255,255,255,0.03)}
+    header{margin-bottom:24px;}
+    header h1{font-size:24px; color:var(--blue);}
 
-    /* Hero */
-    .hero{display:grid; grid-template-columns:1fr 380px; gap:28px; align-items:center; margin-bottom:36px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:22px; border-radius:var(--radius); box-shadow:0 6px 18px rgba(2,6,23,0.6)}
-    h1{margin:0 0 6px 0; font-size:32px}
-    p.lead{margin:0; color:var(--muted)}
-    .cta{margin-top:16px; display:flex; gap:10px}
-    .btn{padding:10px 16px; border-radius:10px; border:0; cursor:pointer}
-    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#042027; font-weight:700}
-    .btn-ghost{background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.03)}
+    section{background:white; padding:20px; border-radius:var(--radius); margin-bottom:20px; border:1px solid var(--gray)}
+    section h2{color:var(--blue); font-size:18px; margin-bottom:8px}
+    section p{color:var(--muted); line-height:1.5}
 
-    /* Features */
-    .features{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:20px 0}
-    .feature{padding:18px}
-    .badge{display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(255,255,255,0.03); color:var(--muted); font-size:13px}
-
-    /* Gallery */
-    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
-    .thumb{height:140px; border-radius:10px; overflow:hidden; background-size:cover; background-position:center}
-
-    /* Testimonials */
-    .testimonials{display:flex; gap:12px; align-items:center}
-    .testimonial{flex:1}
-
-    /* Contact */
-    form{display:grid; gap:10px}
-    input,textarea{width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit}
-
-    /* Footer */
-    footer{margin-top:28px; color:var(--muted); font-size:14px}
-
-    /* Responsiveness */
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .features{grid-template-columns:repeat(2,1fr)}
-      .grid{grid-template-columns:repeat(2,1fr)}
-    }
-    @media (max-width:560px){
-      header{flex-direction:column; align-items:flex-start}
-      nav{flex-wrap:wrap}
-      .features{grid-template-columns:1fr}
-      .grid{grid-template-columns:1fr}
-    }
+    footer{margin-top:20px; text-align:center; color:var(--muted); font-size:14px}
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="brand">
-        <div class="logo">AC</div>
-        <div>
-          <div style="font-weight:700">Acme Co.</div>
-          <div style="font-size:12px;color:var(--muted)">Simple demo template</div>
-        </div>
-      </div>
-
-      <nav>
-        <a href="#features">Features</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
-        <a class="btn btn-ghost" href="#">Sign in</a>
-      </nav>
+      <h1>Minimal Site</h1>
     </header>
 
     <main>
-      <section class="hero card" aria-labelledby="hero-title">
-        <div>
-          <h1 id="hero-title">Beautiful, minimal dummy site</h1>
-          <p class="lead">This is a small, responsive HTML template you can use for demos, testing, or quick prototypes. Fully static — no build tools required.</p>
-
-          <div class="cta">
-            <button class="btn btn-primary" onclick="alert('Primary action clicked — replace with real link')">Get started</button>
-            <button class="btn btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact us</button>
-          </div>
-
-          <div style="margin-top:16px; color:var(--muted); font-size:13px">Built with plain HTML, CSS and a pinch of JavaScript.</div>
-
-          <div style="margin-top:18px; display:flex; gap:10px;">
-            <div class="card" style="padding:10px">⭐ 4.9 — 1,234 reviews</div>
-            <div class="card" style="padding:10px">🕒 Deployed in seconds</div>
-          </div>
-        </div>
-
-        <aside class="card" style="text-align:center">
-          <div style="font-weight:700; margin-bottom:8px">Quick stats</div>
-          <div style="font-size:28px">12,345</div>
-          <div style="color:var(--muted); font-size:13px; margin-top:6px">Happy users</div>
-        </aside>
+      <section id="research">
+        <h2>Research</h2>
+        <p>This section can contain notes, findings, and references for ongoing studies or projects.</p>
       </section>
 
-      <section id="features">
-        <h2 style="margin-top:6px">Core features</h2>
-        <div class="features">
-          <div class="card feature">
-            <div class="badge">Responsive</div>
-            <h3 style="margin:12px 0 6px 0">Works on any device</h3>
-            <p style="margin:0;color:var(--muted)">Layouts adapt from mobile to desktop with no extra framework.</p>
-          </div>
-
-          <div class="card feature">
-            <div class="badge">Static</div>
-            <h3 style="margin:12px 0 6px 0">No backend needed</h3>
-            <p style="margin:0;color:var(--muted)">Perfect for demos, static hosting, or building a quick landing page.</p>
-          </div>
-
-          <div class="card feature">
-            <div class="badge">Accessible</div>
-            <h3 style="margin:12px 0 6px 0">ARIA-friendly</h3>
-            <p style="margin:0;color:var(--muted)">Simple semantics and visible focus states make this template a solid starting point.</p>
-          </div>
-        </div>
+      <section id="personal">
+        <h2>Personal</h2>
+        <p>This section can include personal updates, goals, or reflections in a simple, minimal layout.</p>
       </section>
-
-      <section id="work">
-        <h2>Recent work</h2>
-        <div class="grid" style="margin-top:10px">
-          <div class="thumb card" style="background-image:url('https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=800&q=60')"></div>
-          <div class="thumb card" style="background-image:url('https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=800&q=60')"></div>
-          <div class="thumb card" style="background-image:url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=60')"></div>
-        </div>
-      </section>
-
-      <section style="margin-top:18px">
-        <h2>Testimonials</h2>
-        <div class="testimonials" style="margin-top:10px">
-          <div class="card testimonial">
-            <strong>"Exactly what we needed."</strong>
-            <div style="color:var(--muted); margin-top:8px">Acme's template got our prototype live in under an hour.</div>
-          </div>
-
-          <div class="card testimonial">
-            <strong>"Clean and minimal."</strong>
-            <div style="color:var(--muted); margin-top:8px">Perfect base for our marketing site.</div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" style="margin-top:18px">
-        <h2>Contact</h2>
-        <div class="card" style="margin-top:10px">
-          <form onsubmit="return handleForm(event)">
-            <label class="sr-only">Name</label>
-            <input id="name" placeholder="Your name" required />
-
-            <label class="sr-only">Email</label>
-            <input id="email" placeholder="you@example.com" type="email" required />
-
-            <label class="sr-only">Message</label>
-            <textarea id="message" rows="4" placeholder="Tell us about your project"></textarea>
-
-            <div style="display:flex; gap:8px; margin-top:6px">
-              <button type="submit" class="btn btn-primary">Send message</button>
-              <button type="button" class="btn btn-ghost" onclick="document.getElementById('name').value='';document.getElementById('email').value='';document.getElementById('message').value=''">Clear</button>
-            </div>
-
-            <div id="form-status" style="margin-top:10px;color:var(--muted); font-size:13px"></div>
-          </form>
-        </div>
-      </section>
-
     </main>
 
-    <footer style="margin-top:22px">
-      <div class="card" style="display:flex; justify-content:space-between; align-items:center">
-        <div>© Acme Co. — Dummy template</div>
-        <div style="color:var(--muted)">Made with ❤️ for demos</div>
-      </div>
+    <footer>
+      © 2025 Minimal Dummy Template
     </footer>
-
   </div>
-
-  <script>
-    // small helper for form submission (dummy)
-    function handleForm(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const msg = document.getElementById('message').value.trim();
-      const status = document.getElementById('form-status');
-
-      if(!name || !email){
-        status.textContent = 'Please provide a name and valid email.';
-        return false;
-      }
-
-      // fake "sending" action
-      status.textContent = 'Sending...';
-      setTimeout(() => {
-        status.textContent = 'Thanks, ' + name + '! This is a demo — no message was actually sent.';
-      }, 800);
-
-      return false;
-    }
-
-    // small accessibility improvement for keyboard-only users
-    (function(){
-      let body = document.body;
-      function handleFirstTab(e){
-        if(e.key === 'Tab'){
-          body.classList.add('user-is-tabbing');
-          window.removeEventListener('keydown', handleFirstTab);
-        }
-      }
-      window.addEventListener('keydown', handleFirstTab);
-    })();
-  </script>
 </body>
 </html>
