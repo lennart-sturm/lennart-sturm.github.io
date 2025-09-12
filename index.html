@@ -138,7 +138,76 @@ Upplagor med fler än 500 000 artik</p>
 
       <section id="personal">
         <h2>Personal</h2>
-        <p>This section can include personal updates, goals, or reflections in a simple, minimal layout.</p>
+        <p>matlab window is moving towards left not able to visible full only x is dislay can any i suggest to solve this issue
+87 views (last 30 days)
+gadug
+gadug on 28 Aug 2023
+0
+Link
+Flag
+Answered: Image Analyst   on 29 Apr 2025
+matlab window is moving towards left not able to visible full only x is dislay can any i suggest to solve this issue
+  
+0 Comments
+Lennart Benedikt
+Comment on this question…
+ Answers (3)
+Ramtej
+Ramtej  on 4 Sep 2023
+1
+Link
+Flag
+Hi gadug, 
+I understand that your MATLAB window is not fully visible, and you are able to only see the ‘x’(close) button.
+If the MATLAB window is moving towards the left and only the 'x' (close) button is visible, it is likely that the window is positioned off-screen, or its size is larger than the available screen space.
+Here are a few steps you can try to resolve this issue:
+Use the keyboard shortcut: Press Alt+Spacebar and then press the 'M' key on your keyboard. This will activate the window move command. Now, use the arrow keys on your keyboard to move the window back to a visible position. Press Enter to confirm the new position.                                                                                                                                                                         
+Reset the MATLAB desktop layout: If the issue persists, you can reset the MATLAB desktop layout to its default settings. Close MATLAB completely and then delete the matlab.prf file located in the MATLAB preferences folder. To see the full path for the preferences folder type 'prefdir' in the MATLAB Command Window. After deleting the file, restart MATLAB, and it should open with the default layout.
+             Note: Resetting your preferences will remove any Shortcuts/Favorites you had.
+Adjust the display settings: If the issue still persists, it might be due to incorrect display settings. Try adjusting the screen resolution or scaling settings on your computer to ensure that the MATLAB window fits within the available screen space.
+  Hope this helps!
+ 
+  
+ 
+  
+0 Comments
+Lennart Benedikt
+Comment on this answer…
+Sébastien
+Sébastien on 28 Apr 2025
+0
+Link
+Flag
+Edited: Sébastien on 28 Apr 2025
+Hello!
+My friend Steve and I encountered the same issue, and the way that we found to solve it was to:
+Select the Matlab window (by clicking on it or using Alt+Tab)
+Press Windows + Right Arrow (to move it back to the laptop screen)
+I hope this will help some people!
+  
+0 Comments
+Lennart Benedikt
+Comment on this answer…
+Image Analyst
+Image Analyst   on 29 Apr 2025
+0
+Link
+Flag
+If part(s) of your figure are off screen, try to get the screen size, then reposition and resize your figure window to be on the screen:
+set(gcf, 'Position', get(0, 'Screensize')); % Maximize figure.
+If it's not your current figure, replace gcf with the handle to your figure:
+handleToYourFigure = figure('Name', 'This is the figure I want to see');  % Create a new figure and get the handle to it.
+set(handleToYourFigure, 'Position', get(0, 'Screensize')); % Maximize figure.
+Another thing you could try is to maximize your figure:
+g = gcf; % Or whatever figure you want.
+g.WindowState = 'maximized'
+  
+0 Comments
+Lennart Benedikt
+Comment on this answer…
+Answer this question
+Description
+ Follow activity on this question (change notificatio</p>
       </section>
       <section id="bachelor">   
         <h2>Bachelor project</h2>
