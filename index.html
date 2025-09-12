@@ -4,6 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lennart Sturm</title>
+  <link rel="icon" type="image/png" href="icon.png">
+
+  <!-- Roboto with multiple weights -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg:#f5f6f7; --text:#1a1a1a; --muted:#555; --blue:#2563eb; --gray:#e5e7eb;
@@ -11,22 +16,27 @@
     }
     *{box-sizing:border-box;margin:0;padding:0}
     body{
-      font-family:system-ui, sans-serif; background:var(--bg); color:var(--text);
-      display:flex; justify-content:center; padding:20px;
+      font-family: 'Roboto', sans-serif;
+      font-weight:300; /* light base */
+      background:var(--bg);
+      color:var(--text);
+      display:flex;
+      justify-content:center;
+      padding:20px;
     }
     .container{width:100%; max-width:var(--max-w)}
 
     header{margin-bottom:24px; display:flex; justify-content:space-between; align-items:center;}
-    header h1{font-size:22px; color:var(--blue);}
+    header h1{font-size:22px; color:var(--blue); font-weight:700;} /* bold */
     nav{display:flex; gap:16px;}
-    nav a{color:var(--muted); text-decoration:none; font-weight:500;}
+    nav a{color:var(--muted); text-decoration:none; font-weight:500;} /* medium */
     nav a:hover{color:var(--blue);}
 
     section{background:white; padding:20px; border-radius:var(--radius); margin-bottom:20px; border:1px solid var(--gray)}
-    section h2{color:var(--blue); font-size:18px; margin-bottom:8px}
-    section p{color:var(--muted); line-height:1.5}
+    section h2{color:var(--blue); font-size:18px; margin-bottom:8px; font-weight:700;} /* bold */
+    section p{color:var(--muted); line-height:1.5; font-weight:300;} /* light */
 
-    footer{margin-top:20px; text-align:center; color:var(--muted); font-size:14px}
+    footer{margin-top:20px; text-align:center; color:var(--muted); font-size:14px; font-weight:400;}
   </style>
 </head>
 <body>
@@ -36,187 +46,29 @@
       <nav>
         <a href="#research">Research</a>
         <a href="#personal">Personal</a>
-        <a href="#bachelor">bachelor project</a>
+        <a href="#bachelor">Bachelor Project</a>
       </nav>
     </header>
 
     <main>
       <section id="research">
         <h2>Research</h2>
-        <p>Laputa – slottet i himlen (japanska: 天空の城ラピュタ Tenkū no shiro Rapyuta?) är en japansk animerad äventyrsfilm från 1986. Regissör var Hayao Miyazaki (även manus), och filmen var den första som animerades på nystartade Studio Ghibli. Laputa – slottet i himlen har lånat inslag från Jonathan Swifts roman Gullivers resor, där den tredje resan delvis utspelas på den fritt svävande stadsön Laputa.
-
-Filmen innehåller scenerier från gruvdistrikt, i viss mån efterliknande faktiska miljöer i Rhondda-dalen i Wales. Den är även påverkad av tidigare Miyazaki-projekt där blå ädelstenar, pirater och kontroversiella industrimiljöer figurerar. Dessutom har den, som Makoto Shinkais favoritfilm, inspirerat till inslag i dennes filmer. I Japan har inte minst filmens ikoniska robotar blivit kända, och en av dem finns utställd i full skala på taket av Studio Ghiblis museum i västra Tokyo. ► Läs mer
-
-Senast visade utmärkta artiklar: Gråsparv – Georg Riedel – Rafael Ramstedt
-
-Redigera • Utvalt innehåll på Wikipedia • Schema för dagens utmärkta artikel • Nomineringar
-
-Visste du att …
-Christoper Marlowe
-... den multiresistenta sporsäcksvampen Candidozyma auris sprider sig globalt – främst på sjukhus – och ger allvarliga infektioner hos människan?
-... Marloweporträttet (se bild) kan vara den enda bilden som finns av pjäsförfattaren Christopher Marlowe?
-... Eira Hellberg var krigskorrespondent, skrev om katter och deltog i seanser?
-... Lon Non var yngre bror till Lon Nol?
-... Paderborns domkyrka är den fjärde eller femte kyrkan på platsen, efter att saxare, bränder och biskopar gjort sitt för att demolera de tidigare byggena?
-Länk till äldre artikelpuffar
-Redigera • Från Wikipedias nyaste artiklar • Arkiv
-
-Dagens datum
-Den rekonstruerade ostindiefararen Götheborg avseglar från Göteborgs hamn den 2 oktober 2005.
-
-12 september
-
-Namnsdag: Åsa, Åslög (Sverige) • Dagny, Neo, Nova (finlandssvenska)
-
-Denna dag i historien:
-
-1745 – Ostindiefararen Götheborg (se bild) går på grund utanför Göteborg och förliser.
-1921 – Det första allmänna valet till Sveriges riksdag hålls i vilket både män och kvinnor har rösträtt.
-1943 – Italienske ex-diktatorn Benito Mussolini fritas ur sin husarrest av tyska Waffen-SS.
-1953 – USA:s blivande president John F. Kennedy och Jacqueline Bouvier gifter sig.
-1974 – Etiopiens kejsare Haile Selassie avsätts i en militärkupp ledd av den så kallade dergen.
-1977 – Sydafrikanske anti-apartheidkämpen Steve Biko avlider i fängelse efter brutal misshandel.
-2003 – Den amerikanske sångaren, låtskrivaren och musikern Johnny Cash avlider.
-Fler händelser: 11 september • 12 september • 13 septemberRedigera • Alla dagar
-
-Dagens skandinaviska artikel
-Narsaq-staven.
-Narsaq-staven er ein furustav innskriven med runesymbol som er tidfesta til rundt år 1000. Staven blei oppdaga i Narsaq på Grønland i 1953. Han blei raskt identifisert som eit viktig funn, sidan han var den fyrste runeinnskrifta frå vikingtida som var oppdaga på Grønland. Stykket har to setningar med tvitydig og uklar runetekst. Ei framlagt tolking av den fyrste setninga er ‘Den som sat på eit kar såg eit kar’ medan ein annan er ‘Over havet, havet, havet er bakhaldet til æsene’. Den andre setninga refererer til ei jente som heiter «Bibrau» som kanskje sit på himmelen. Runebokstavane er kortkvistruner som er skorne inn på ei side av stokken. Endå ei anna sida har fleire nøye utskorne symbol med uklare tydingar, kanskje løyndruner eller ei form for telling. Les meir …
-
-Mer om dagens skandinaviska artikel • Skanwiki
-
-Deltagande
-Wikipedia är en encyklopedi med öppet och fritt innehåll som utvecklas av frivilliga bidragsgivare från hela världen. Alla kan vara med och förbättra Wikipedia. Du också.
-Vill du förbättra Wikipedia?
-Behöver du hjälp?
-Vill du ha idéer om vad du kan göra?
-Så här är Wikipedia uppbyggt.
-
-Aktuella händelser
-Charlie Kirk.
-Den amerikanske högerdebattören Charlie Kirk (se bild) mördas vid ett möte i Utah, 31 år gammal. (10 september)
-Det rödgröna blocket, under ledning av Norges statsminister Jonas Gahr Støre, vinner Stortingsvalet 2025. (8 september)
-Sveriges kulturkanon presenteras av en kommitté under ledning av historikern Lars Trägårdh. (2 september)
-En kraftig jordbävning inträffar i Afghanistan. Magnituden är 6,0 och dess epicenter var 27 kilometer från Jalalabad, nära gränsen till Pakistan. (31 augusti)
-Kiruna kyrka flyttas några kilometer till det nya centrumet som en del av stadens omvandling. (19 augusti)
-Nyligen avlidna: David Baltimore (6/9) · Giorgio Armani (4/9) · Katharine, hertiginna av Kent (4/9) · Dhimitër Anagnosti (1/9) · Graham Greene (1/9)
-Pågående eller kommande händelser: Operation Prosperity Guardian utanför Jemen
-Pågående större krig: Gaza · Rysslands invasion av Ukraina · Sudan · Jemen · Myanmar
-Mest visad igår: Charlie Kirk · Mest visade 2025
-
-Redigera • Fler händelser
-
-Utvald bild
-Louis Armstrong, 1947.
-
-Louis Armstrong spelandes trumpet, 1947.
-
-Arkiv • Fler utvalda bilder
-
-Wikipedias systerprojekt
-	Commons
-Den fria medie­data­basen		Wiktionary
-Den fria ord­boken		Wikisource
-Det fria biblioteket
-	Wikiquote
-Den fria citat­samlingen		Wikivoyage
-Den fria rese­guiden		Wikispecies
-Den fria art­förteck­ningen
-	Wikidata
-Den fria data­basen		Wikibooks
-Fria läro­böcker och manualer		Meta-Wiki
-Om projekten
-	Wikimania
-Konferensen för projekten om fri kunskap
-
-Wikipedia på andra språk
-Upplagor med fler än 1 000 000 artiklar
-العربية · Sinugboanong Binisaya · Deutsch · English · Español · Français · Italiano · 日本語 · Nederlands · Polski · Português · Русский · Українська · Tiếng Việt · Winaray · 中文 · مصرى (Maṣri)
-
-Upplagor med fler än 500 000 artik</p>
+        <p>Laputa – slottet i himlen (japanska: 天空の城ラピュタ Tenkū no shiro Rapyuta?) är en japansk animerad äventyrsfilm från 1986...</p>
       </section>
 
       <section id="personal">
         <h2>Personal</h2>
-        <p>matlab window is moving towards left not able to visible full only x is dislay can any i suggest to solve this issue
-87 views (last 30 days)
-gadug
-gadug on 28 Aug 2023
-0
-Link
-Flag
-Answered: Image Analyst   on 29 Apr 2025
-matlab window is moving towards left not able to visible full only x is dislay can any i suggest to solve this issue
-  
-0 Comments
-Lennart Benedikt
-Comment on this question…
- Answers (3)
-Ramtej
-Ramtej  on 4 Sep 2023
-1
-Link
-Flag
-Hi gadug, 
-I understand that your MATLAB window is not fully visible, and you are able to only see the ‘x’(close) button.
-If the MATLAB window is moving towards the left and only the 'x' (close) button is visible, it is likely that the window is positioned off-screen, or its size is larger than the available screen space.
-Here are a few steps you can try to resolve this issue:
-Use the keyboard shortcut: Press Alt+Spacebar and then press the 'M' key on your keyboard. This will activate the window move command. Now, use the arrow keys on your keyboard to move the window back to a visible position. Press Enter to confirm the new position.                                                                                                                                                                         
-Reset the MATLAB desktop layout: If the issue persists, you can reset the MATLAB desktop layout to its default settings. Close MATLAB completely and then delete the matlab.prf file located in the MATLAB preferences folder. To see the full path for the preferences folder type 'prefdir' in the MATLAB Command Window. After deleting the file, restart MATLAB, and it should open with the default layout.
-             Note: Resetting your preferences will remove any Shortcuts/Favorites you had.
-Adjust the display settings: If the issue still persists, it might be due to incorrect display settings. Try adjusting the screen resolution or scaling settings on your computer to ensure that the MATLAB window fits within the available screen space.
-  Hope this helps!
- 
-  
- 
-  
-0 Comments
-Lennart Benedikt
-Comment on this answer…
-Sébastien
-Sébastien on 28 Apr 2025
-0
-Link
-Flag
-Edited: Sébastien on 28 Apr 2025
-Hello!
-My friend Steve and I encountered the same issue, and the way that we found to solve it was to:
-Select the Matlab window (by clicking on it or using Alt+Tab)
-Press Windows + Right Arrow (to move it back to the laptop screen)
-I hope this will help some people!
-  
-0 Comments
-Lennart Benedikt
-Comment on this answer…
-Image Analyst
-Image Analyst   on 29 Apr 2025
-0
-Link
-Flag
-If part(s) of your figure are off screen, try to get the screen size, then reposition and resize your figure window to be on the screen:
-set(gcf, 'Position', get(0, 'Screensize')); % Maximize figure.
-If it's not your current figure, replace gcf with the handle to your figure:
-handleToYourFigure = figure('Name', 'This is the figure I want to see');  % Create a new figure and get the handle to it.
-set(handleToYourFigure, 'Position', get(0, 'Screensize')); % Maximize figure.
-Another thing you could try is to maximize your figure:
-g = gcf; % Or whatever figure you want.
-g.WindowState = 'maximized'
-  
-0 Comments
-Lennart Benedikt
-Comment on this answer…
-Answer this question
-Description
- Follow activity on this question (change notificatio</p>
+        <p>matlab window is moving towards left not able to visible full only x is dislay...</p>
       </section>
+
       <section id="bachelor">   
-        <h2>Bachelor project</h2>
+        <h2>Bachelor Project</h2>
         <p>This section can include personal updates, goals, or reflections in a simple, minimal layout.</p>
       </section>
     </main>
 
     <footer>
-      Septmeber, 2025
+      September, 2025
     </footer>
   </div>
 </body>
