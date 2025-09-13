@@ -1,75 +1,147 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lennart Sturm</title>
-  <link rel="icon" type="image/png" href="icon.png">
-
-  <!-- Roboto with multiple weights -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <title>Wireless Communications Research Map</title>
   <style>
-    :root{
-      --bg:#f5f6f7; --text:#1a1a1a; --muted:#555; --blue:#2563eb; --gray:#e5e7eb;
-      --radius:10px; --max-w:800px;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+      overflow-x: hidden;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family: 'Roboto', sans-serif;
-      font-weight:300; /* light base */
-      background:var(--bg);
-      color:var(--text);
-      display:flex;
-      justify-content:center;
-      padding:20px;
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #00274d;
+      color: white;
+      position: relative;
     }
-    .container{width:100%; max-width:var(--max-w)}
 
-    header{margin-bottom:24px; display:flex; justify-content:space-between; align-items:center;}
-    header h1{font-size:22px; color:var(--blue); font-weight:700;} /* bold */
-    nav{display:flex; gap:16px;}
-    nav a{color:var(--muted); text-decoration:none; font-weight:500;} /* medium */
-    nav a:hover{color:var(--blue);}
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
 
-    section{background:white; padding:20px; border-radius:var(--radius); margin-bottom:20px; border:1px solid var(--gray)}
-    section h2{color:var(--blue); font-size:18px; margin-bottom:8px; font-weight:700;} /* bold */
-    section p{color:var(--muted); line-height:1.5; font-weight:300;} /* light */
+    /* Custom dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
 
-    footer{margin-top:20px; text-align:center; color:var(--muted); font-size:14px; font-weight:400;}
+    .dropdown-label {
+      background: white;
+      color: black;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: white;
+  color: black;          /* ✅ ensure text is black */
+  min-width: 200px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  padding: 0.5rem;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  color: black;          /* ✅ force black text inside items */
+}
+
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    
+
+    .dropdown-item:hover {
+      background: #f0f0f0;
+    }
+
+    .dropdown-item input {
+      margin-right: 0.5rem;
+    }
+
+    /* Cluster area */
+    .cluster {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    .topic {
+      width: 120px;
+      height: 120px;
+      background: #e0f0ff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease-in-out;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .topic:nth-child(odd) { animation-duration: 7s; }
+    .topic:nth-child(even) { animation-duration: 5s; }
+
+    .topic:hover {
+      transform: scale(1.15);
+      background: #cde7ff;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Lennart Sturm</h1>
-      <nav>
-        <a href="#research">Research</a>
-        <a href="#personal">Personal</a>
-        <a href="#bachelor">Bachelor Project</a>
-      </nav>
-    </header>
+  <header>
+    <h1>Wireless Communications Research Map</h1>
+    <div class="dropdown">
+      <div class="dropdown-label">Universities ▾</div>
+      <div class="dropdown-content">
+        <label class="dropdown-item">
+          <input type="checkbox" checked>
+          Lund University
+        </label>
+      </div>
+    </div>
+  </header>
 
-    <main>
-      <section id="research">
-        <h2>Research</h2>
-        <p>Laputa – slottet i himlen (japanska: 天空の城ラピュタ Tenkū no shiro Rapyuta?) är en japansk animerad äventyrsfilm från 1986...</p>
-      </section>
-
-      <section id="personal">
-        <h2>Personal</h2>
-        <p>matlab window is moving towards left not able to visible full only x is dislay...</p>
-      </section>
-
-      <section id="bachelor">   
-        <h2>Bachelor Project</h2>
-        <p>This section can include personal updates, goals, or reflections in a simple, minimal layout.</p>
-      </section>
-    </main>
-
-    <footer>
-      September, 2025
-    </footer>
-  </div>
+  <main>
+    <div class="cluster">
+      <div class="topic">5G/6G Networks</div>
+      <div class="topic">Massive MIMO</div>
+      <div class="topic">IoT Connectivity</div>
+      <div class="topic">Energy Efficiency</div>
+      <div class="topic">ML for Wireless</div>
+      <div class="topic">Terahertz</div>
+      <div class="topic">Spectrum Sharing</div>
+    </div>
+  </main>
 </body>
 </html>
